@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bt0wru1d2f8ei"]
+[gd_scene load_steps=10 format=3 uid="uid://bt0wru1d2f8ei"]
 
 [ext_resource type="Texture2D" uid="uid://debnv2wws8mkc" path="res://64ebefbbd558d77f1a1e0d01a4e050c1.jpg" id="1_ig7tw"]
+[ext_resource type="FontFile" uid="uid://bl4s7q4odat1u" path="res://SHPinscher-Regular.otf" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://7x2u1077wyg0" path="res://main.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://503sn50novga" path="res://player.gd" id="3_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(10.208328, 100.06329)
@@ -14,12 +17,17 @@ size = Vector2(735.0001, 40.790123)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
 size = Vector2(735.0002, 35.691406)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(40.83334, 413)
+
 [node name="Main" type="Sprite2D"]
 scale = Vector2(1.567347, 1.5690073)
 texture = ExtResource("1_ig7tw")
 centered = false
+script = ExtResource("2_h2yge")
 
 [node name="Player" type="StaticBody2D" parent="."]
+script = ExtResource("3_1bvp3")
 
 [node name="ColorRect" type="ColorRect" parent="Player"]
 anchors_preset = 4
@@ -57,6 +65,7 @@ shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="ball" type="CharacterBody2D" parent="."]
 position = Vector2(367.49997, 203.95062)
+collision_mask = 3
 
 [node name="ColorRect" type="ColorRect" parent="ball"]
 anchors_preset = 8
@@ -79,6 +88,7 @@ shape = SubResource("RectangleShape2D_h2yge")
 metadata/_edit_lock_ = true
 
 [node name="Borders" type="StaticBody2D" parent="."]
+collision_layer = 2
 
 [node name="top" type="CollisionShape2D" parent="Borders"]
 position = Vector2(367.5, -20.395061)
@@ -90,4 +100,44 @@ position = Vector2(367.5, 430.84567)
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_lquwl")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="score Left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="score Left"]
+position = Vector2(-20.416662, 206.5)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="score right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="score right"]
+position = Vector2(755.4165, 206.5)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="display" type="CanvasLayer" parent="."]
+
+[node name="Player score" type="Label" parent="display"]
+offset_left = 456.0
+offset_top = 5.0
+offset_right = 496.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CPU score" type="Label" parent="display"]
+offset_left = 648.0
+offset_top = 5.0
+offset_right = 688.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ball timer" type="Timer" parent="."]
+one_shot = true
+autostart = true

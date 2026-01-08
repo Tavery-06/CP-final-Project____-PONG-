@@ -11,4 +11,5 @@ config_version=5
 [application]
 
 config/name="pong.project"
+run/main_scene="uid://bt0wru1d2f8ei"
 config/features=PackedStringArray("4.5", "Forward Plus")
