@@ -15,4 +15,4 @@ func _process(delta: float) -> void:
 		position.y += get_parent().PADDLE_SPEED * delta
 
 	#limit paddle Movement to window
-	position.y = clamp(position.y, p_height/2 ,  win_height - p_height/2)ggg
+		position.y = clamp(position.y, p_height/2 , win_height - p_height/2) 
