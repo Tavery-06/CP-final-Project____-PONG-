@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt0wru1d2f8ei"]
+[gd_scene load_steps=11 format=3 uid="uid://bt0wru1d2f8ei"]
 
 [ext_resource type="FontFile" uid="uid://bl4s7q4odat1u" path="res://SHPinscher-Regular.otf" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://7x2u1077wyg0" path="res://main.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://503sn50novga" path="res://player.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://cpam2tk20etke" path="res://cpu.gd" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://cpor7vln1wes8" path="res://ball.gd" id="3_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(21.20213, 121.1202)
@@ -26,7 +28,7 @@ centered = false
 script = ExtResource("2_h2yge")
 
 [node name="Player" type="StaticBody2D" parent="."]
-position = Vector2(20, 324)
+position = Vector2(-5, 324)
 script = ExtResource("3_1bvp3")
 
 [node name="ColorRect" type="ColorRect" parent="Player"]
@@ -45,7 +47,8 @@ scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="CPU" type="StaticBody2D" parent="."]
-position = Vector2(1082, 324)
+position = Vector2(1115, 324)
+script = ExtResource("3_7mycd")
 
 [node name="ColorRect" type="ColorRect" parent="CPU"]
 anchors_preset = 4
@@ -58,13 +61,14 @@ grow_vertical = 2
 rotation = 6.2831855
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
-position = Vector2(10.403893, -0.35097075)
+position = Vector2(10.403931, -0.35095215)
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="ball" type="CharacterBody2D" parent="."]
 position = Vector2(541.1539, 317.6923)
 collision_mask = 3
+script = ExtResource("3_lquwl")
 
 [node name="ColorRect" type="ColorRect" parent="ball"]
 anchors_preset = 8
@@ -135,6 +139,8 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Ball timer" type="Timer" parent="."]
+[node name="Ball" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[connection signal="timeout" from="Ball" to="." method="_on_ball_timer_timeout"]
