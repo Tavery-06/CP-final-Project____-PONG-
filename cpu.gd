@@ -1,5 +1,5 @@
 extends StaticBody2D
-var CPU_SPEED = 450
+var CPU_SPEED = 400
 var ball_pos : Vector2
 var dist: int
 var move_by:int
