@@ -102,10 +102,10 @@ grow_vertical = 2
 rotation = 6.2831855
 
 [node name="start button" type="Button" parent="."]
-offset_left = 444.0
-offset_top = 388.0
-offset_right = 709.0
-offset_bottom = 512.0
+offset_left = 392.0
+offset_top = 312.0
+offset_right = 724.0
+offset_bottom = 436.0
 theme_override_colors/font_color = Color(0.9515795, 0.95157963, 0.9515794, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -118,5 +118,25 @@ theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 85
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e4hpb")
-text = "START"
+text = "1 Player"
+icon = SubResource("ViewportTexture_1yvcn")
+
+[node name="start button2" type="Button" parent="."]
+offset_left = 400.0
+offset_top = 448.0
+offset_right = 732.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0.9515795, 0.95157963, 0.9515794, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9515795, 0.95157963, 0.9515795, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 0.5019608)
+theme_override_colors/font_outline_color = Color(0.99116415, 0.99116427, 0.99116415, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 85
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e4hpb")
+text = "2 Player"
 icon = SubResource("ViewportTexture_1yvcn")
