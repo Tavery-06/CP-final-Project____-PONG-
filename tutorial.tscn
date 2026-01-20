@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dycy5m676px5i"]
+[gd_scene load_steps=3 format=3 uid="uid://dycy5m676px5i"]
 
 [ext_resource type="FontFile" uid="uid://bl4s7q4odat1u" path="res://SHPinscher-Regular.otf" id="1_7n6eb"]
+[ext_resource type="Script" uid="uid://dwbymar0bvcxs" path="res://tutorial.gd" id="1_yb1ct"]
 
 [node name="tutorial" type="Node2D"]
+script = ExtResource("1_yb1ct")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -10,9 +12,83 @@ offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 312.0
-offset_right = 823.0
+offset_left = 304.0
+offset_right = 815.0
 offset_bottom = 237.0
 theme_override_fonts/font = ExtResource("1_7n6eb")
 theme_override_font_sizes/font_size = 196
 text = "Tutorial"
+
+[node name="Title" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 80.0
+offset_right = 215.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("1_7n6eb")
+theme_override_font_sizes/font_size = 50
+text = "1 player"
+
+[node name="text" type="Label" parent="Title"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 192.0
+offset_bottom = 208.0
+text = "Player use UP and Down
+ keys to move the paddle
+ and try to beat the CPU
+"
+
+[node name="Title2" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 320.0
+offset_right = 231.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("1_7n6eb")
+theme_override_font_sizes/font_size = 50
+text = "2 player"
+
+[node name="text" type="Label" parent="Title2"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 192.0
+offset_bottom = 208.0
+text = "Player 1 use the keys 
+W and S and Player 2
+ use UP and Down
+"
+
+[node name="Rules" type="Label" parent="."]
+offset_left = 864.0
+offset_top = 88.0
+offset_right = 1064.0
+offset_bottom = 224.0
+theme_override_fonts/font = ExtResource("1_7n6eb")
+theme_override_font_sizes/font_size = 100
+text = "Rules"
+
+[node name="text" type="Label" parent="Rules"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 240.0
+offset_bottom = 369.0
+text = "Use the paddles to hit the 
+ball and keep it from 
+passing through
+ your side and try to
+ hit it through the
+ other players side.  
+
+FIrst to 7 points wins 
+The ball will gradually
+ increase in speed"
+
+[node name="Main menu button" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 320.0
+offset_right = 706.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 56
+text = "Main menu"

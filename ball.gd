@@ -25,7 +25,7 @@ func _physics_process(delta):
 		if collider == $"../Player" or collider == $"../CPU":
 			speed+= ACCEL
 			dir = new_diretion(collider)
-		#if ball hits wall
+		#if ball hits  wall
 		else: 
 			dir = dir.bounce(collision.get_normal())
 			

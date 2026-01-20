@@ -28,3 +28,7 @@ func _on_score_right_body_entered(body: Node2D) -> void:
 	score[0] += 1
 	$"display/Player score".text = str(score[0])
 	$balltimer.start()
+	
+func _on_win():
+	if score[0] == 1:
+		get_tree().change_scene_to_file("res://winscreen_player_1.tscn")
