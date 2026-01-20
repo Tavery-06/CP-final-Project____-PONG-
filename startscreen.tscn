@@ -102,10 +102,10 @@ grow_vertical = 2
 rotation = 6.2831855
 
 [node name="start button" type="Button" parent="."]
-offset_left = 392.0
-offset_top = 312.0
-offset_right = 724.0
-offset_bottom = 436.0
+offset_left = 48.0
+offset_top = 473.0
+offset_right = 419.0
+offset_bottom = 645.0
 theme_override_colors/font_color = Color(0.9515795, 0.95157963, 0.9515794, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -122,10 +122,10 @@ text = "1 Player"
 icon = SubResource("ViewportTexture_1yvcn")
 
 [node name="start button2" type="Button" parent="."]
-offset_left = 400.0
-offset_top = 448.0
-offset_right = 732.0
-offset_bottom = 572.0
+offset_left = 748.0
+offset_top = 473.0
+offset_right = 1121.0
+offset_bottom = 645.0
 theme_override_colors/font_color = Color(0.9515795, 0.95157963, 0.9515794, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -140,3 +140,11 @@ theme_override_font_sizes/font_size = 85
 theme_override_styles/normal = SubResource("StyleBoxEmpty_e4hpb")
 text = "2 Player"
 icon = SubResource("ViewportTexture_1yvcn")
+
+[node name="Tutorial button" type="Button" parent="."]
+offset_left = 339.0
+offset_top = 320.0
+offset_right = 808.0
+offset_bottom = 483.0
+theme_override_font_sizes/font_size = 54
+text = "Tutorial and rules"

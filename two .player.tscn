@@ -21,7 +21,7 @@ size = Vector2(1163.077, 65.4996)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
 size = Vector2(64.6154, 643.327)
 
-[node name="Main" type="Sprite2D"]
+[node name="TwoPlayer" type="Sprite2D"]
 position = Vector2(16, 0)
 scale = Vector2(0.99047613, 1.0072639)
 centered = false
