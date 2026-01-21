@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://duijjc4e800og"]
+[gd_scene load_steps=3 format=3 uid="uid://d4alqb3gnqiq8"]
 
-[ext_resource type="Script" uid="uid://h8nn3toyfau3" path="res://winscreen_player_1.gd" id="1_x3kll"]
-[ext_resource type="FontFile" uid="uid://bl4s7q4odat1u" path="res://SHPinscher-Regular.otf" id="2_2peeg"]
+[ext_resource type="Script" uid="uid://bd7ya0cnacslv" path="res://winscreen_player_2.gd" id="1_ajpyj"]
+[ext_resource type="FontFile" uid="uid://bl4s7q4odat1u" path="res://SHPinscher-Regular.otf" id="2_6cs1u"]
 
-[node name="winscreen Player 1" type="Node2D"]
-script = ExtResource("1_x3kll")
+[node name="winscreen Player 2" type="Node2D"]
+script = ExtResource("1_ajpyj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -12,20 +12,20 @@ offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 136.0
+offset_left = 32.0
 offset_top = 72.0
-offset_right = 1012.0
+offset_right = 1306.0
 offset_bottom = 496.0
-theme_override_fonts/font = ExtResource("2_2peeg")
+theme_override_fonts/font = ExtResource("2_6cs1u")
 theme_override_font_sizes/font_size = 175
-text = "Player 1 wins "
+text = "Player 2/CPU wins "
 
 [node name="PlayButton" type="Button" parent="."]
 offset_left = 400.0
 offset_top = 336.0
 offset_right = 696.0
 offset_bottom = 432.0
-theme_override_fonts/font = ExtResource("2_2peeg")
+theme_override_fonts/font = ExtResource("2_6cs1u")
 theme_override_font_sizes/font_size = 66
 text = "Play Again"
 
@@ -34,6 +34,6 @@ offset_left = 384.0
 offset_top = 464.0
 offset_right = 716.0
 offset_bottom = 568.0
-theme_override_fonts/font = ExtResource("2_2peeg")
+theme_override_fonts/font = ExtResource("2_6cs1u")
 theme_override_font_sizes/font_size = 66
 text = "Exit"
