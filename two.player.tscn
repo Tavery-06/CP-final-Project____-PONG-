@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dadbwibnli1nc"]
 
-[ext_resource type="Script" uid="uid://7x2u1077wyg0" path="res://main.gd" id="1_34q4q"]
+[ext_resource type="Script" uid="uid://b528rquvlgkcs" path="res://two.player.gd" id="1_34q4q"]
 [ext_resource type="Script" uid="uid://503sn50novga" path="res://player.gd" id="2_l18bc"]
 [ext_resource type="Script" uid="uid://du7tu4fh85pno" path="res://player_2.gd" id="3_nvsai"]
 [ext_resource type="Script" uid="uid://cpor7vln1wes8" path="res://ball.gd" id="4_0ib4h"]
@@ -140,6 +140,21 @@ offset_top = -7.942308
 offset_right = 557.3078
 offset_bottom = 643.32697
 
+[node name="scoreinfo" type="Label" parent="."]
+offset_left = 161.53845
+offset_top = 55.596153
+offset_right = 985.53845
+offset_bottom = 182.6731
+theme_override_fonts/font = ExtResource("5_f208b")
+theme_override_font_sizes/font_size = 101
+text = "First to 7  Points wins"
+
+[node name="Timer" type="Timer" parent="scoreinfo"]
+wait_time = 3.5
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="score Left" to="." method="_on_score_left_body_entered"]
 [connection signal="body_entered" from="score right" to="." method="_on_score_right_body_entered"]
 [connection signal="timeout" from="balltimer" to="." method="_on_ball_timer_timeout"]
+[connection signal="timeout" from="scoreinfo/Timer" to="." method="_on_timer_timeout"]
