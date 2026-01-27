@@ -39,7 +39,7 @@ func _on_win() -> void:
 
 	elif score[1] == 7:
 		await _win_delay()
-		get_tree().change_scene_to_file("res://winscreen_cpu.tscn")
+		get_tree().change_scene_to_file("res://winscreen_player_2.tscn")
 
 
 func _win_delay() -> void:
